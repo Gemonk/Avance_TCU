@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://crcjqgn047d70"]
+
+[ext_resource type="Texture2D" uid="uid://cn31mg0qv6aaq" path="res://icon.svg" id="1_jij42"]
+
+[node name="Controles" type="CanvasLayer"]
+
+[node name="TouchDown" type="TouchScreenButton" parent="."]
+position = Vector2(65, 207)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("1_jij42")
+passby_press = true
+action = "ui_down"
+
+[node name="TouchLeft" type="TouchScreenButton" parent="."]
+position = Vector2(9.00002, 155)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("1_jij42")
+passby_press = true
+action = "ui_left"
+
+[node name="TouchUp" type="TouchScreenButton" parent="."]
+position = Vector2(63, 103)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("1_jij42")
+passby_press = true
+action = "ui_up"
+
+[node name="TouchRight" type="TouchScreenButton" parent="."]
+position = Vector2(118, 155)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("1_jij42")
+passby_press = true
+action = "ui_rigth"
+
+[node name="TouchAttack" type="TouchScreenButton" parent="."]
+position = Vector2(313, 200)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("1_jij42")
+action = "ui_attack"
+
+[node name="TouchDash" type="TouchScreenButton" parent="."]
+position = Vector2(405, 200)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("1_jij42")
+action = "ui_dash"
