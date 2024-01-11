@@ -1,0 +1,90 @@
+[gd_scene load_steps=8 format=3 uid="uid://bttddktlwrc34"]
+
+[ext_resource type="Script" path="res://Scrips/menu.gd" id="1_icd5x"]
+[ext_resource type="FontVariation" uid="uid://dxjmu7n68dnrm" path="res://fuenteMenu.tres" id="1_kqiu4"]
+[ext_resource type="FontFile" uid="uid://b3184kankx3ap" path="res://Fuentes/04B_30__.TTF" id="2_d56ui"]
+[ext_resource type="Texture2D" uid="uid://cpfp8sbco3dvs" path="res://Fondos/name.png" id="2_owoxb"]
+[ext_resource type="PackedScene" uid="uid://xkax06r8r6pw" path="res://parallax_background.tscn" id="3_lh5ip"]
+[ext_resource type="Texture2D" uid="uid://4vijqm83fks5" path="res://icon.svg" id="6_6wgjo"]
+
+[sub_resource type="FontVariation" id="FontVariation_pqvvf"]
+base_font = ExtResource("2_d56ui")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_icd5x")
+
+[node name="VBoxBotones" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.0
+offset_top = -242.0
+offset_right = 214.0
+offset_bottom = 242.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 73
+alignment = 1
+
+[node name="NombreJuego" type="TextureRect" parent="VBoxBotones"]
+layout_mode = 2
+texture = ExtResource("2_owoxb")
+
+[node name="Jugar" type="Button" parent="VBoxBotones"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.909804, 0.713726, 0.145098, 1)
+theme_override_colors/font_pressed_color = Color(0.517647, 0.407843, 0.835294, 1)
+theme_override_colors/font_hover_color = Color(0.984314, 0.87451, 0.603922, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("1_kqiu4")
+theme_override_font_sizes/font_size = 60
+text = "Jugar"
+flat = true
+
+[node name="Salir" type="Button" parent="VBoxBotones"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.909804, 0.713726, 0.145098, 1)
+theme_override_colors/font_pressed_color = Color(0.611765, 0.47451, 0.882353, 1)
+theme_override_colors/font_hover_color = Color(0.984314, 0.87451, 0.603922, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_pqvvf")
+theme_override_font_sizes/font_size = 60
+text = "Salir"
+flat = true
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("3_lh5ip")]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 596.0
+offset_right = 322.0
+offset_bottom = 636.0
+theme_override_constants/separation = 800
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "texto con información específica"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_6wgjo")
+expand_mode = 2
+
+[connection signal="pressed" from="VBoxBotones/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="VBoxBotones/Salir" to="." method="_on_salir_pressed"]

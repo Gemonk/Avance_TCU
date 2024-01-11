@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://2jpfguqrmwnu"]
+
+[ext_resource type="Texture2D" uid="uid://cpfp8sbco3dvs" path="res://Fondos/name.png" id="1_vvkno"]
+
+[node name="jugando" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(586, 303)
+scale = Vector2(3.645, 2.06)
+texture = ExtResource("1_vvkno")
