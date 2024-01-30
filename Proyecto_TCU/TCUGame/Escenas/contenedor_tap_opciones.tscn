@@ -1,0 +1,185 @@
+[gd_scene format=3 uid="uid://xhg7k1j055e3"]
+
+[node name="Contenedor_Tap_opciones" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 70.0
+offset_right = -100.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_alignment = 1
+
+[node name="Sonido" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Sonido"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Sonido/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="S1" type="Label" parent="TabContainer/Sonido/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "S1"
+
+[node name="S2" type="Label" parent="TabContainer/Sonido/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "S2"
+
+[node name="S3" type="Label" parent="TabContainer/Sonido/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "S3"
+
+[node name="S4" type="Label" parent="TabContainer/Sonido/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "S4"
+
+[node name="S5" type="Label" parent="TabContainer/Sonido/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "S5"
+
+[node name="Gráficos" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Gráficos"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Gráficos/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="G1" type="Label" parent="TabContainer/Gráficos/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "G1"
+
+[node name="G2" type="Label" parent="TabContainer/Gráficos/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "G2"
+
+[node name="G3" type="Label" parent="TabContainer/Gráficos/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "G3"
+
+[node name="G4" type="Label" parent="TabContainer/Gráficos/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "G4"
+
+[node name="G5" type="Label" parent="TabContainer/Gráficos/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "G5"
+
+[node name="Controles" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Controles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Controles/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="C1" type="Label" parent="TabContainer/Controles/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "C1"
+
+[node name="C2" type="Label" parent="TabContainer/Controles/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "C2"
+
+[node name="C3" type="Label" parent="TabContainer/Controles/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "C3"
+
+[node name="C4" type="Label" parent="TabContainer/Controles/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "C4"
+
+[node name="C5" type="Label" parent="TabContainer/Controles/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "C5"
+
+[node name="Accesibilidad" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Accesibilidad"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Accesibilidad/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="A1" type="Label" parent="TabContainer/Accesibilidad/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "A1"
+
+[node name="A2" type="Label" parent="TabContainer/Accesibilidad/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "A2"
+
+[node name="A3" type="Label" parent="TabContainer/Accesibilidad/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "A3"
+
+[node name="A4" type="Label" parent="TabContainer/Accesibilidad/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "A4"
+
+[node name="A5" type="Label" parent="TabContainer/Accesibilidad/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "A5"
