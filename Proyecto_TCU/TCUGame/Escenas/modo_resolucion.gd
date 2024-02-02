@@ -1,6 +1,6 @@
 extends Control
 
-@onready var opction_button = $HBoxContainer/OptionButton as OptionButton
+@onready var option_button = $HBoxContainer/OptionButton as OptionButton
 
 const RESOLUTION_DICTIONARY : Dictionary = {
 	"1152 x 648" : Vector2i(1152, 648),
@@ -9,12 +9,14 @@ const RESOLUTION_DICTIONARY : Dictionary = {
 }
 
 func _ready():
-	opction_button.item_selected.connect(on_resolution_selected)
+	option_button.item_selected.connect(on_resolution_selected)
 	add_resolution_items()
 	
 func add_resolution_items():
 	for resolution_size_text in RESOLUTION_DICTIONARY:
-		opction_button.add_item(resolution_size_text)
+		option_button.add_item(resolution_size_text)
 	
 func on_resolution_selected(index : int):
 	DisplayServer.window_set_size(RESOLUTION_DICTIONARY.values()[index])
+
+

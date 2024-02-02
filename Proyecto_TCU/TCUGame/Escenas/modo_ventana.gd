@@ -13,6 +13,7 @@ const WINDOW_MODE_ARRAY : Array[String] = [
 
 func _ready():
 	_add_window_mode_item()
+	select_current_window_mode()
 	option_button.item_selected.connect(on_window_mode_selected)
 	
 func _add_window_mode_item():
@@ -33,4 +34,21 @@ func on_window_mode_selected(index : int):
 		3: #Pantalla completa sin borde
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
+
+func select_current_window_mode() -> void:
+	var mode = DisplayServer.window_get_mode()
+	var borderless = DisplayServer.window_get_flag(DisplayServer.WINDOW_FLAG_BORDERLESS)
+	match mode:
+		DisplayServer.WINDOW_MODE_FULLSCREEN:
+			if borderless:
+				option_button.select(3)
+			else:
+				option_button.select(0)
+		DisplayServer.WINDOW_MODE_WINDOWED:
+			if borderless:
+				option_button.select(2)
+			else:
+				option_button.select(1)
+		_:
+			pass
 			
