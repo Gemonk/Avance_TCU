@@ -53,12 +53,6 @@ text = "Salir"
 
 [node name="Fondo2" type="Sprite2D" parent="."]
 show_behind_parent = true
-position = Vector2(686.625, 324)
-scale = Vector2(1.66479, 0.92041)
-texture = ExtResource("4_nr32h")
-
-[node name="Fondo2" type="Sprite2D" parent="Fondo2"]
-show_behind_parent = true
-position = Vector2(137.179, -20.643)
-scale = Vector2(1.66479, 1.25278)
+position = Vector2(573.5, 333)
+scale = Vector2(1.11621, 0.673828)
 texture = ExtResource("4_nr32h")
