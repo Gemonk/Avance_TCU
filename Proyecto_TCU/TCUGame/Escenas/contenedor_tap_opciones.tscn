@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://xhg7k1j055e3"]
+[gd_scene load_steps=7 format=3 uid="uid://xhg7k1j055e3"]
 
 [ext_resource type="PackedScene" uid="uid://cci070n805ckj" path="res://Escenas/teclas_acceso.tscn" id="1_3g6nu"]
 [ext_resource type="PackedScene" uid="uid://b7n7yguonr65e" path="res://Escenas/modo_ventana.tscn" id="1_10ihb"]
 [ext_resource type="PackedScene" uid="uid://drx8ygutogc1o" path="res://Escenas/modo_resolucion.tscn" id="2_w5tcd"]
+[ext_resource type="PackedScene" uid="uid://c41wqivsa5g11" path="res://Escenas/accesibilidad.tscn" id="4_dhxj6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jgt08"]
 
@@ -180,27 +181,11 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Accesibilidad/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Accesibilidad/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 64
-alignment = 1
 
-[node name="A1" type="Label" parent="TabContainer/Accesibilidad/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Accesibilidad/MarginContainer/ScrollContainer"]
 layout_mode = 2
-text = "A1"
 
-[node name="A2" type="Label" parent="TabContainer/Accesibilidad/MarginContainer/VBoxContainer"]
+[node name="Accesibilidad" parent="TabContainer/Accesibilidad/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("4_dhxj6")]
 layout_mode = 2
-text = "A2"
-
-[node name="A3" type="Label" parent="TabContainer/Accesibilidad/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "A3"
-
-[node name="A4" type="Label" parent="TabContainer/Accesibilidad/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "A4"
-
-[node name="A5" type="Label" parent="TabContainer/Accesibilidad/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "A5"

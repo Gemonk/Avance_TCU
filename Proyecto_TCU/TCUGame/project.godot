@@ -18,6 +18,10 @@ config/icon="res://icon.svg"
 
 window/stretch/mode="canvas_items"
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://Idiomas/traducciones.eng.translation", "res://Idiomas/traducciones.esp.translation")
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
