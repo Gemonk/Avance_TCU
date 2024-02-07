@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bttddktlwrc34"]
+[gd_scene load_steps=10 format=3 uid="uid://bttddktlwrc34"]
 
 [ext_resource type="Script" path="res://Scrips/menu.gd" id="1_icd5x"]
 [ext_resource type="FontVariation" uid="uid://dxjmu7n68dnrm" path="res://fuenteMenu.tres" id="1_kqiu4"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://xkax06r8r6pw" path="res://parallax_background.tscn" id="3_lh5ip"]
 [ext_resource type="Texture2D" uid="uid://4vijqm83fks5" path="res://icon.svg" id="6_6wgjo"]
 [ext_resource type="PackedScene" uid="uid://q2xejw7osjvg" path="res://Escenas/menu_opciones.tscn" id="7_7pdi0"]
+[ext_resource type="AudioStream" uid="uid://cilpvucng527c" path="res://Musica/FIVE OF A KIND - Density & Time.mp3" id="8_qaagq"]
 
 [sub_resource type="FontVariation" id="FontVariation_pqvvf"]
 base_font = ExtResource("2_d56ui")
@@ -109,6 +110,12 @@ expand_mode = 2
 [node name="Menu_Opciones" parent="." instance=ExtResource("7_7pdi0")]
 visible = false
 layout_mode = 1
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_qaagq")
+volume_db = -6.265
+autoplay = true
+bus = &"Musica"
 
 [connection signal="pressed" from="VBoxBotones/Jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="VBoxBotones/Opciones" to="." method="_on_opciones_pressed"]

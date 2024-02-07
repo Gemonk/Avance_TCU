@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://q2xejw7osjvg"]
+[gd_scene load_steps=6 format=3 uid="uid://q2xejw7osjvg"]
 
 [ext_resource type="Script" path="res://Escenas/menu_opciones.gd" id="1_f2cd3"]
 [ext_resource type="FontVariation" uid="uid://dxjmu7n68dnrm" path="res://fuenteMenu.tres" id="1_ot4et"]
 [ext_resource type="PackedScene" uid="uid://xhg7k1j055e3" path="res://Escenas/contenedor_tap_opciones.tscn" id="3_aw4fh"]
 [ext_resource type="Texture2D" uid="uid://dy74e2twik56p" path="res://Fondos/fondo2.png" id="4_nr32h"]
+[ext_resource type="AudioStream" uid="uid://cilpvucng527c" path="res://Musica/FIVE OF A KIND - Density & Time.mp3" id="5_42jmm"]
 
 [node name="Menu_Opciones" type="Control"]
 layout_mode = 3
@@ -56,3 +57,9 @@ show_behind_parent = true
 position = Vector2(573.5, 333)
 scale = Vector2(1.11621, 0.673828)
 texture = ExtResource("4_nr32h")
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_42jmm")
+volume_db = -6.265
+autoplay = true
+bus = &"Musica"
