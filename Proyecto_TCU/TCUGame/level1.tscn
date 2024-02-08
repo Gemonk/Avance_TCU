@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhude6xitn6xo"]
+
+[ext_resource type="Texture2D" uid="uid://cx1qsqa4qwsus" path="res://Fondos/parallax-00.png" id="1_kkwfc"]
+[ext_resource type="PackedScene" uid="uid://dhfp5kbj0q877" path="res://Personajes/player.tscn" id="2_yfuxp"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_kkwfc")
+
+[node name="player" parent="." instance=ExtResource("2_yfuxp")]
