@@ -12,8 +12,8 @@ script = ExtResource("1_r83sy")
 motion_scale = Vector2(0, 0)
 
 [node name="Fondo" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(574.675, 319.675)
-scale = Vector2(1.15465, 0.66065)
+position = Vector2(571.675, 321.675)
+scale = Vector2(1.14865, 0.66465)
 texture = ExtResource("2_iwp1t")
 region_enabled = true
 region_rect = Rect2(0, 0, 1000, 1000)

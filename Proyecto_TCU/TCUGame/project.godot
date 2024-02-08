@@ -11,8 +11,16 @@ config_version=5
 [application]
 
 config/name="TCUGame"
-config/features=PackedStringArray("4.1", "GL Compatibility")
+config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://Idiomas/traducciones.eng.translation", "res://Idiomas/traducciones.esp.translation")
 
 [rendering]
 
