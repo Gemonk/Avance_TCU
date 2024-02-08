@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://c41wqivsa5g11"]
+
+[ext_resource type="Script" path="res://Escenas/accesibilidad.gd" id="1_ballo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vp6hg"]
+
+[node name="Accesibilidad" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ballo")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 828.0
+offset_bottom = 253.0
+theme_override_constants/separation = 64
+
+[node name="Idioma" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Idioma"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 124
+
+[node name="Idioma2" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "maleku
+brorán
+térraba"
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 124
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 80
+theme_override_styles/separator = SubResource("StyleBoxEmpty_vp6hg")
+
+[node name="Eng" type="Button" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "English"
+
+[node name="Esp" type="Button" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Español"
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+text = "Esta es una prueba:
+"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Eng" to="." method="_on_eng_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Esp" to="." method="_on_esp_pressed"]

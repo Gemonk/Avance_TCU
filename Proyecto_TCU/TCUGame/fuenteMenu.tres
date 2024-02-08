@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://dxjmu7n68dnrm"]
+
+[ext_resource type="FontFile" uid="uid://b3184kankx3ap" path="res://Fuentes/04B_30__.TTF" id="1_7wvbs"]
+
+[resource]
+base_font = ExtResource("1_7wvbs")
