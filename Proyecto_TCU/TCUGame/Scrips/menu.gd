@@ -2,7 +2,8 @@ extends Control
 
 
 func _on_jugar_pressed():
-	get_tree().change_scene_to_file("res://Escenas/jugando.tscn")
+	#get_tree().change_scene_to_file("res://Escenas/jugando.tscn")
+	get_tree().change_scene_to_file("res://level1.tscn")
 
 
 func _on_salir_pressed():
@@ -10,9 +11,6 @@ func _on_salir_pressed():
 
 func _on_opciones_pressed():
 	get_tree().change_scene_to_file("res://Escenas/menu_opciones.tscn")
-
-func _on_informacion_pressed():
-	get_tree().change_scene_to_file("res://Escenas/instrucciones.tscn")
 	
 
 	
